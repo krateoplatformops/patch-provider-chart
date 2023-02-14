@@ -12,14 +12,14 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - name: Extract Version
-        id: tagger
-        uses: battila7/get-version-action@v2
+      # - name: Extract Version
+      #   id: tagger
+      #   uses: battila7/get-version-action@v2
 
-      - name: Print Version
-        run: |
-          echo ${{steps.tagger.outputs.version}}
-          echo ${{steps.tagger.outputs.version-without-v}}
+      # - name: Print Version
+      #   run: |
+      #     echo ${{steps.tagger.outputs.version}}
+      #     echo ${{steps.tagger.outputs.version-without-v}}
       - name: App Version
         uses: tdemin/find-latest-tag@v1
         id: app_version
