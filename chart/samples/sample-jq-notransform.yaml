@@ -1,0 +1,20 @@
+apiVersion: krateo.io/v1alpha1
+kind: Patch
+metadata:
+  name: sample-notransform
+spec:
+  from:
+    objectReference:
+      apiVersion: v1
+      kind: ConfigMap
+      name: foo
+      # namespace: default
+    fieldPath: data
+  to:
+    objectReference:
+      apiVersion: v1
+      kind: ConfigMap
+      name: bar
+      # namespace: default
+    fieldPath: data
+ 
